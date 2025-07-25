@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor Advance</title>
+    <link rel="stylesheet" href="All css files/10-style.css" />
+  </head>
+  <body>
+    <h1 class="heading">ROCK PAPER SCISSORS</h1>
+    <button class="move-button" onclick="playerGame('Rock')">
+      <img src="images icon/rock-emoji.png" class="icon" />
+    </button>
+    <button class="move-button" onclick="playerGame('Paper')">
+      <img src="images icon/paper-emoji.png" class="icon" />
+    </button>
+    <button class="move-button" onclick="playerGame('Scissor')">
+      <img src="images icon/scissor-emoji.png" class="icon" />
+    </button>
+    <p class="js-result result"></p>
+    <p class="js-moves moves"></p>
+    <p class="js-score">.</p>
+    <button onclick="resetScore()" class="reset-button">Reset score</button>
+
+    <script src="java script files/10-game-script.js"></script>
+  </body>
+</html>

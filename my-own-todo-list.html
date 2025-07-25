@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="All css files/my-own-todolist.css" />
+    <title>TOdo list part 2</title>
+  </head>
+  <body>
+    <p>My own todo list</p>
+    <div class="todo-list">
+      <input
+        type="text"
+        class="js-input-todolist name-input"
+        placeholder="Add a new todo"
+        onkeydown="if (event.key === 'Enter') {addTodo()}"
+      />
+      <input
+        type="date"
+        class="js-input-date date-input"
+        onkeydown="if (event.key === 'Enter'){addTodo()}"
+      />
+      <button onclick="addTodo()" class="add-button">Add</button>
+    </div>
+    <div class="js-todo-list todo-list-show"></div>
+
+    <script src="java script files/my-own-todolist.js"></script>
+  </body>
+</html>

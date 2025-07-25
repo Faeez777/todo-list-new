@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="All css files/11-arrays-and-loops.css" />
+    <title>Todo list practice</title>
+  </head>
+  <body>
+    <p>Todo list</p>
+    <div class="todo-grid-input">
+      <input
+        placeholder="Todo Name"
+        class="js-name-input name-input"
+        onkeydown="if (event.key === 'Enter') {addTodo()}"
+      />
+      <input type="date" class="js-due-date-input due-date-input" />
+      <button class="add-button" onclick="addTodo()">Add</button>
+    </div>
+    <div class="js-todo-list todo-grid"></div>
+    <script src="java script files/11-arrays-and-loops.js"></script>
+  </body>
+</html>

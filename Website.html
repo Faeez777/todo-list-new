@@ -1,0 +1,112 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="All css files/Website.css" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <button onclick="playGame('Rock')">Rock</button>
+    <button onclick="playGame('Paper')">Paper</button>
+    <button onclick="playGame('Scissor')">Scissor</button>
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+    <button
+      onclick="score.wins = 0; score.losses = 0; score.ties = 0; localStorage.removeItem('score');
+    updateScore();"
+    >
+      Reset Score
+    </button>
+
+    <button
+      onclick="cartQuantity += 1;console.log(`Cart quantity: ${cartQuantity}`);"
+    >
+      Add +1
+    </button>
+
+    <button
+      onclick="cartQuantity = 0; console.log(`Cart quantity reset to: ${cartQuantity}`);"
+    >
+      Reset cart
+    </button>
+
+    <button onclick="console.log(`Cart quantity: ${cartQuantity}`);">
+      Cart quantity
+    </button>
+
+    <button onclick="greet()">Greets</button>
+    <input type="number" id="celsiusInput" placeholder="Enter Celsius" />
+    <button
+      onclick="convertToFahrenheit(Number(document.getElementById('celsiusInput').value))"
+    >
+      Convert To Fahrenheit
+    </button>
+    <input type="number" id="fahrenheitInput" placeholder="Enter Fahrenheit" />
+    <button
+      onclick="convertToCelsius(Number(document.getElementById('fahrenheitInput').value))"
+    >
+      Convert To Celsius
+    </button>
+
+    <input type="number" id="degreeInput" placeholder="Enter degree value" />
+
+    <button
+      onclick="document.getElementById('conversionResult').innerText = convertTemperature(Number(document.getElementById('degreeInput').value), 'C') + ' F'"
+    >
+      Convert to Fahrenheit
+    </button>
+    <button
+      onclick="document.getElementById('conversionResult').innerText = convertTemperature(Number(document.getElementById('degreeInput').value), 'F') + ' C'"
+    >
+      Convert to Celsius
+    </button>
+    <div id="conversionResult"></div>
+
+    <input type="number" id="lengthInput" placeholder="Enter length value" />
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; flex-wrap: wrap">
+      <button onclick="calculateLength( 'mile', 'Km') + 'Km'">
+        Mile to Km
+      </button>
+      <button onclick="calculateLength( 'Km', 'mile') + 'mile'">
+        Km to Mile
+      </button>
+      <button onclick="calculateLength('Km', 'feet') + 'feet'">
+        Km to Feet
+      </button>
+      <button onclick="calculateLength('mile', 'feet') + 'feet'">
+        Mile to Feet
+      </button>
+      <button onclick="calculateLength('feet', 'mile') + 'mile'">
+        Feet to Mile
+      </button>
+      <button onclick="calculateLength('feet', 'Km') + 'Km'">Feet to Km</button>
+    </div>
+    <div id="conversion"></div>
+
+    <p>YOUTUBE Subscribe button</p>
+    <button class="js-button" onclick="toggleSubscribe()">Subscribe</button>
+
+    <p>AMAZON Shipping Calculator</p>
+    <p>Orders under $40 = +$10 Shipping</p>
+    <p>Orders above $40 = Free Shipping</p>
+    <input
+      type="number"
+      id="orderAmount"
+      placeholder="Enter order amount"
+      onkeydown="if (event.key === 'Enter') {calculateTotal()}"
+    />
+    <button onclick="calculateTotal()">Calculate</button>
+
+    <input
+      type="text"
+      class="liveInput"
+      placeholder="Enter text"
+      oninput="showLiveText()"
+      maxlength="30"
+    />
+    <span id="charCount">0/30</span>
+    <div id="shippingResult"></div>
+    <script src="java script files/script.js"></script>
+  </body>
+</html>

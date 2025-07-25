@@ -1,0 +1,181 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="All css files/10-calculator.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Create an element to display the calculation. -->
+    <p class="js-calculation calculation"></p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculation('1');
+      "
+      >
+        1
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('2');
+      "
+      >
+        2
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('3');
+      "
+      >
+        3
+      </button>
+
+      <button
+        class="symbol"
+        onclick="
+        updateCalculation(' + ');
+      "
+      >
+        +
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculation('4');
+      "
+      >
+        4
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('5');
+      "
+      >
+        5
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('6');
+      "
+      >
+        6
+      </button>
+
+      <button
+        class="symbol"
+        onclick="
+        updateCalculation(' - ');
+      "
+      >
+        -
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculation('7');
+      "
+      >
+        7
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('8');
+      "
+      >
+        8
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('9');
+      "
+      >
+        9
+      </button>
+
+      <button
+        class="symbol"
+        onclick="
+        updateCalculation(' * ');
+      "
+      >
+        *
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        updateCalculation('0');
+      "
+      >
+        0
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('.');
+      "
+      >
+        .
+      </button>
+
+      <button
+        onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      "
+      >
+        =
+      </button>
+
+      <button
+        class="symbol"
+        onclick="
+        updateCalculation(' / ');
+      "
+      >
+        /
+      </button>
+    </p>
+
+    <p>
+      <button
+        class="clear-btn"
+        onclick="
+        calculation = '';
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      "
+      >
+        Clear
+      </button>
+    </p>
+
+    <script src="java script files/10-calculator.js"></script>
+  </body>
+</html>
