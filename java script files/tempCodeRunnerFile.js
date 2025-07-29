@@ -1,0 +1,1 @@
+console.log(removeEgg(["egg", "More", "egg", "egg", "apple", "hello"]));
