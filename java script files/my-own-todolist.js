@@ -1,5 +1,5 @@
 console.log("HELLO SIR! FAEEZ!. My Pleasure to have you today here👧");
-const todoList = [
+let todoList = JSON.parse(localStorage.getItem("todoList")) || [
   {
     name: "Drink Water",
     date: "21-07-2025",
@@ -10,7 +10,6 @@ const todoList = [
   },
 ];
 renderTodoList();
-//sample
 
 function renderTodoList() {
   let todoListHTML = "";
@@ -24,6 +23,8 @@ function renderTodoList() {
   }
   document.querySelector(".js-todo-list").innerHTML = todoListHTML;
   console.log(todoListHTML);
+
+  localStorage.setItem("todoList", JSON.stringify(todoList));
 }
 
 function addTodo() {
